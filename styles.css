@@ -1,0 +1,42 @@
+/* Paleta de colores (ajusta los valores según tus preferencias) */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #0056b2;
+    --gray: #f8f9fa;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--gray);
+}
+
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="Logo de Emalgalsas">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+    <div class="cta">
+        <a href="#" class="cta-button">Solicitar Cotización</a>
+    </div>
+</header>
+/* Estilos para las secciones, servicios, formulario, etc. */
+.hero {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* ... y así sucesivamente para cada sección */
