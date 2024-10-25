@@ -1,8 +1,23 @@
-// Ejemplo de un script para validar el formulario
-const form = document.querySelector('form');
+// Agregar efectos a los botones
 
-form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    // Aquí puedes agregar la lógica para validar los datos del formulario y enviarlos
-    alert('Formulario enviado');
+const buttons = document.querySelectorAll('.cta-button');
+
+
+
+buttons.forEach(button => {
+
+    button.addEventListener('mouseover', () => {
+
+        button.style.transform = 'scale(1.1)';
+
+    });
+
+
+
+    button.addEventListener('mouseout', () => {
+
+        button.style.transform = 'scale(1)';
+
+    });
+
 });
