@@ -1,147 +1,90 @@
 <!DOCTYPE html>
-
 <html lang="es">
 
-<head>
+<header>
 
-    <meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Emalgalsas - Soluciones de logística y transporte confiables y eficientes">
+    <meta name="description" content="Emalgalsas - Soluciones de logística y transporte confiables y eficientes">
 
-    <title>Emalgalsas - Logística y Transporte</title>
+    <title>Emalgalsas - Logística y Transporte</title>
 
-    <link rel="stylesheet" href="styles.css"> <!-- Vinculando el archivo CSS -->
-
-</head>
+    <link rel="stylesheet" href="styles.css"> <!-- Vinculando el archivo CSS -->
 
 <body>
-
-    <header>
-
-        <div class="container">
-
-            <h1>Emalgalsas</h1>
-
-            <nav>
-
-                <a href="#servicios">Servicios</a>
-
-                <a href="#nosotros">Nosotros</a>
-
-                <a href="#contacto">Contacto</a>
-
-                <a href="#solicitar" class="cta-button">Solicitar Cotización</a>
-
-            </nav>
-
-        </div>
-
-    </header>
-
-
-
-    <section class="hero">
-
-        <div class="hero-text">
-
-            <h1>Logística y Transporte Door to Door</h1>
-
-            <p>Conectamos su negocio con el mundo.</p>
-
-            <a href="#servicios" class="cta-button">Descubre Más</a>
-
-        </div>
-
-    </section>
-
-
-
-    <section id="servicios" class="section">
-
-        <h2>Nuestros Servicios</h2>
-
-        <div class="services">
-
-            <div class="service-item">
-
-                <h3>Transporte Nacional</h3>
-
-                <p>Servicios de transporte por carretera en todo el país, asegurando entregas rápidas y seguras.</p>
-
-            </div>
-
-            <div class="service-item">
-
-                <h3>Logística Internacional</h3>
-
-                <p>Soluciones logísticas globales para empresas que buscan expandir sus operaciones internacionales.</p>
-
-            </div>
-
-            <div class="service-item">
-
-                <h3>Almacenamiento Seguro</h3>
-
-                <p>Infraestructura de almacenamiento moderno con monitoreo 24/7 para mantener su inventario seguro.</p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <section id="nosotros" class="section">
-
-        <h2>¿Quiénes Somos?</h2>
-
-        <p>Con más de 20 años de experiencia, en Emalgalsas nos comprometemos a brindar soluciones logísticas integrales que apoyan el crecimiento de su negocio.</p>
-
-    </section>
-
-
-
-   <section id="contacto" class="section">
-
-    <h2>Contáctanos</h2>
-
-    <form id="contact-form">
-
-        <input type="text" name="nombre" placeholder="Tu Nombre" required>
-
-        <input type="email" name="email" placeholder="Tu Email" required>
-
-        <textarea name="mensaje" placeholder="Tu Mensaje" required></textarea>
-
-        <button type="submit" class="cta-button">Enviar Mensaje</button>
-
-    </form>
-
-    <p>Email: <a href="mailto:contacto@emalgalsas.com">contacto@emalgalsas.com</a> | Teléfono: +123 456 7890</p>
-
-</section>
-
-
-
-
-
-    <footer>
-
-        <p>© 2024 Emalgalsas. Todos los derechos reservados.</p>
-
-    </footer>
-
-
-
-    <script src="script.js"></script> <!-- Vinculando el archivo JS -->
-
+    <!-- Header -->
+    <header>
+        <img src="image/" alt="EMALGALSA Logo" class="logo">
+        <h1>EMALGALSA Logistic Company</h1>
+        <p>Logística y transporte de puerta a puerta</p>
+        <nav>
+            <a href="#about">Sobre Nosotros</a>
+            <a href="#services">Servicios</a>
+            <a href="#industries">Sectores</a>
+            <a href="#track">Seguimiento de Envíos</a>
+            <a href="#contact">Contáctanos</a>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>Sobre Nosotros</h2>
+        <p>EMALGALSA es una empresa dedicada a la logística y transporte, especializada en servicios puerta a puerta. Nuestra misión es asegurar la entrega confiable y segura de tu carga.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Servicios</h2>
+        <div class="service">
+            <h3>Transporte Internacional</h3>
+            <p>Ofrecemos transporte aéreo, marítimo y terrestre a nivel internacional.</p>
+        </div>
+        <div class="service">
+            <h3>Logística de Última Milla</h3>
+            <p>Entregas directas a domicilio con puntualidad y seguridad.</p>
+        </div>
+        <div class="service">
+            <h3>Gestión de Almacén</h3>
+            <p>Almacenamiento seguro y eficiente para tu inventario.</p>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section id="industries">
+        <h2>Sectores</h2>
+        <p>Atendemos diversas industrias como comercio electrónico, automotriz, tecnología, y más.</p>
+    </section>
+
+    <!-- Track Shipment Section -->
+    <section id="track">
+        <h2>Seguimiento de Envíos</h2>
+        <form id="tracking-form">
+            <label for="tracking-number">Ingresa tu número de seguimiento:</label>
+            <input type="text" id="tracking-number" name="tracking-number" required>
+            <button type="button" onclick="trackShipment()">Rastrear</button>
+        </form>
+        <p id="tracking-result"></p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contáctanos</h2>
+        <form id="contact-form">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
 </body>
-
 </html>
-
-
-
-Mostrar versiones
