@@ -5,7 +5,6 @@
     box-sizing: border-box;
 }
 
-/* General */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
@@ -55,7 +54,7 @@ nav a:hover {
     background-color: #004080;
 }
 
-/* Section */
+/* Section Styles */
 section {
     padding: 60px 20px;
     max-width: 1200px;
@@ -67,49 +66,117 @@ section h2 {
     font-size: 2rem;
     color: #1e90ff;
     margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
 }
 
-/* Contact Section */
-#contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+section h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #1e90ff;
+    margin: 10px auto;
 }
 
-.contact-container {
+section p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+/* Service Cards */
+.service-container {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
-    width: 100%;
-    max-width: 1200px;
+    justify-content: center;
     margin-top: 30px;
 }
 
-#contact-form,
-#map {
-    flex: 1;
+.service {
+    flex: 1 1 300px;
+    background-color: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
 }
 
+.service h3 {
+    color: #1e90ff;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.service p {
+    color: #666;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Tracking Form */
+#tracking-form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#tracking-form input,
+#tracking-form button {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#tracking-form input:focus {
+    outline: none;
+    border-color: #1e90ff;
+}
+
+#tracking-form button {
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#tracking-form button:hover {
+    background-color: #004080;
+}
+
+/* Contact Form */
 #contact-form {
-    background-color: white;
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-#map {
-    height: 400px;
-}
-
-/* Formulario de Contacto */
 #contact-form input,
 #contact-form textarea,
 #contact-form button {
-    width: 100%;
     padding: 12px;
     font-size: 1rem;
-    margin-bottom: 10px;
     border-radius: 5px;
     border: 1px solid #ddd;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    outline: none;
+    border-color: #1e90ff;
 }
 
 #contact-form button {
@@ -124,13 +191,18 @@ section h2 {
     background-color: #004080;
 }
 
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 768px) {
-    .contact-container {
-        flex-direction: column;
+    header h1 {
+        font-size: 2rem;
     }
 
-    #map {
-        height: 300px;
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .service-container {
+        flex-direction: column;
     }
 }
