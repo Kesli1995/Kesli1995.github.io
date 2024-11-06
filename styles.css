@@ -43,6 +43,19 @@ header {
     font-size: 0.9rem;
     color: #666;
 }
+/* Estilo para la imagen debajo de la navegación */
+.header-image {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 40px;
+}
+
+.header-image .main-image {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
 nav {
     display: flex;
