@@ -1,90 +1,208 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
+/* Reset */
+* {
     margin: 0;
     padding: 0;
-    color: #333;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background-color: #f4f6f9;
+}
+
+/* Header */
 header {
     background-color: #1e90ff;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
 }
 
 header .logo {
-    width: 80px;
-    margin-bottom: 10px;
+    width: 70px;
+    border-radius: 50%;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
 }
 
 nav {
-    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 nav a {
     color: white;
-    margin: 0 15px;
     text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
+nav a:hover {
+    background-color: #004080;
+}
+
+/* Section Styles */
 section {
-    padding: 40px;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
     text-align: center;
 }
 
 section h2 {
+    font-size: 2rem;
     color: #1e90ff;
     margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #1e90ff;
+    margin: 10px auto;
+}
+
+section p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 20px auto;
 }
 
 /* Service Cards */
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
 .service {
-    border: 1px solid #ddd;
+    flex: 1 1 300px;
+    background-color: white;
     padding: 20px;
-    margin: 10px;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
 }
 
 .service h3 {
     color: #1e90ff;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
-/* Track Shipment */
+.service p {
+    color: #666;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Tracking Form */
 #tracking-form {
     max-width: 400px;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 #tracking-form input,
 #tracking-form button {
-    padding: 10px;
-    width: 100%;
-    margin-top: 10px;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#tracking-form input:focus {
+    outline: none;
+    border-color: #1e90ff;
+}
+
+#tracking-form button {
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#tracking-form button:hover {
+    background-color: #004080;
 }
 
 /* Contact Form */
 #contact-form {
     max-width: 600px;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 #contact-form input,
 #contact-form textarea,
 #contact-form button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
 }
 
-button {
+#contact-form input:focus,
+#contact-form textarea:focus {
+    outline: none;
+    border-color: #1e90ff;
+}
+
+#contact-form button {
     background-color: #1e90ff;
     color: white;
     border: none;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #0066cc;
+#contact-form button:hover {
+    background-color: #004080;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .service-container {
+        flex-direction: column;
+    }
 }
