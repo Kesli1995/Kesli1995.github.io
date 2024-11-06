@@ -56,7 +56,28 @@ header {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+/* Estilos para el skewed background */
+.skewed-background {
+    background-color: #006699; /* Color azul del logo */
+    height: 100px;
+    width: 100%;
+    border-radius: 20px;
+    transform: skewX(-15deg);
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+    animation: translateSkew 1.5s ease-out forwards;
+}
 
+/* Animación de translación desde el centro hacia la derecha */
+@keyframes translateSkew {
+    from {
+        transform: translateX(-50%) skewX(-15deg);
+    }
+    to {
+        transform: translateX(0) skewX(-15deg);
+    }
+}
 nav {
     display: flex;
     gap: 15px;
