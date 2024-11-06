@@ -1,90 +1,71 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<header>
-
+<head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description" content="Emalgalsas - Soluciones de logística y transporte confiables y eficientes">
-
-    <title>Emalgalsas - Logística y Transporte</title>
-
-    <link rel="stylesheet" href="styles.css"> <!-- Vinculando el archivo CSS -->
-
+    <title>EMALGALSA Logistic Company</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 <body>
-    <!-- Header -->
     <header>
-        <img src="image/logo-emalgalsa.jpg" alt="EMALGALSA Logo" class="logo">
+        <img src="logo.png" alt="EMALGALSA Logo" class="logo">
         <h1>EMALGALSA Logistic Company</h1>
-        <p>Logística y transporte de puerta a puerta</p>
+        <p>Servicios de logística y transporte puerta a puerta</p>
         <nav>
-            <a href="#about">Sobre Nosotros</a>
             <a href="#services">Servicios</a>
-            <a href="#industries">Sectores</a>
-            <a href="#track">Seguimiento de Envíos</a>
-            <a href="#contact">Contáctanos</a>
+            <a href="#tracking">Rastreo</a>
+            <a href="#contact">Contacto</a>
         </nav>
     </header>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>Sobre Nosotros</h2>
-        <p>EMALGALSA es una empresa dedicada a la logística y transporte, especializada en servicios puerta a puerta. Nuestra misión es asegurar la entrega confiable y segura de tu carga.</p>
-    </section>
-
-    <!-- Services Section -->
     <section id="services">
-        <h2>Servicios</h2>
-        <div class="service">
-            <h3>Transporte Internacional</h3>
-            <p>Ofrecemos transporte aéreo, marítimo y terrestre a nivel internacional.</p>
-        </div>
-        <div class="service">
-            <h3>Logística de Última Milla</h3>
-            <p>Entregas directas a domicilio con puntualidad y seguridad.</p>
-        </div>
-        <div class="service">
-            <h3>Gestión de Almacén</h3>
-            <p>Almacenamiento seguro y eficiente para tu inventario.</p>
+        <h2>Nuestros Servicios</h2>
+        <p>Ofrecemos servicios de transporte y logística personalizados...</p>
+        <div class="service-container">
+            <div class="service">
+                <h3>Transporte Terrestre</h3>
+                <p>Servicio de transporte terrestre seguro...</p>
+            </div>
+            <div class="service">
+                <h3>Transporte Aéreo</h3>
+                <p>Envío rápido y seguro por vía aérea...</p>
+            </div>
+            <div class="service">
+                <h3>Almacenamiento</h3>
+                <p>Servicios de almacenamiento y distribución...</p>
+            </div>
         </div>
     </section>
 
-    <!-- Industries Section -->
-    <section id="industries">
-        <h2>Sectores</h2>
-        <p>Atendemos diversas industrias como comercio electrónico, automotriz, tecnología, y más.</p>
-    </section>
-
-    <!-- Track Shipment Section -->
-    <section id="track">
-        <h2>Seguimiento de Envíos</h2>
+    <section id="tracking">
+        <h2>Rastreo de Envíos</h2>
+        <p>Ingrese el número de seguimiento para verificar el estado de su envío.</p>
         <form id="tracking-form">
-            <label for="tracking-number">Ingresa tu número de seguimiento:</label>
-            <input type="text" id="tracking-number" name="tracking-number" required>
-            <button type="button" onclick="trackShipment()">Rastrear</button>
+            <input type="text" placeholder="Número de seguimiento" required>
+            <button type="submit">Rastrear</button>
         </form>
-        <p id="tracking-result"></p>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact">
         <h2>Contáctanos</h2>
-        <form id="contact-form">
-            <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Correo Electrónico:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="message">Mensaje:</label>
-            <textarea id="message" name="message" required></textarea>
-            
-            <button type="submit">Enviar</button>
-        </form>
+        <div class="contact-container">
+            <!-- Columna izquierda: Formulario de contacto -->
+            <div id="contact-form">
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Correo electrónico" required>
+                <textarea placeholder="Mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </div>
+
+            <!-- Columna derecha: Mapa de Google -->
+            <div id="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.0960595737334!2d-79.87883194626695!3d-2.1539976833676937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6dbc004fa33b%3A0xa9e96f7b92821c43!2sAeropuerto%20Internacional%20Jos%C3%A9%20Joaqu%C3%ADn%20de%20Olmedo!5e0!3m2!1ses-419!2sec!4v1601474393155!5m2!1ses-419!2sec"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
     </section>
 
-    <script src="script.js"></script>
 </body>
 </html>
