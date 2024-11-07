@@ -25,7 +25,7 @@ header {
 }
 
 .logo {
-    width: 80px;
+    width: 60px;
     height: auto;
 }
 
@@ -63,10 +63,10 @@ header {
     width: 100%;
     border-radius: 20px;
     transform: skewX(-15deg);
-    position: relative;
+    position:static;
     overflow: hidden;
     margin-top: 20px;
-    animation: translateSkew 1.5s ease-out forwards;
+    /*animation: translateSkew 1.5s ease-out forwards;*/
 }
 
 /* Animación de translación desde el centro hacia la derecha */
